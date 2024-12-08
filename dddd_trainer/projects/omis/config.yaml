@@ -1,0 +1,24 @@
+Model:
+    CharSet: [' ', '9', '5', '-', '7', '0', '2', '6', '1', '3', x, '8', '=', '4',
+        +]
+    ImageChannel: 1
+    ImageHeight: 64
+    ImageWidth: -1
+    Word: false
+System:
+    Allow_Ext: [jpg, jpeg, png, bmp]
+    GPU: true
+    GPU_ID: 0
+    Path: get_train\train
+    Project: omis
+    Val: 0.3
+Train:
+    BATCH_SIZE: 32
+    CNN: {NAME: ddddocr}
+    DROPOUT: 0.3
+    LR: 0.01
+    OPTIMIZER: SGD
+    SAVE_CHECKPOINTS_STEP: 1000
+    TARGET: {Accuracy: 0.99, Cost: 0.05, Epoch: 100}
+    TEST_BATCH_SIZE: 32
+    TEST_STEP: 500
